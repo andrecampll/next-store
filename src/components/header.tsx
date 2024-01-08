@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between">
+    <div className="flex items-center justify-between">
       <div className="flex items-center gap-5">
         <Link href="/" className="text-2xl font-extrabold text-white">
           devstore
@@ -39,6 +39,6 @@ export function Header() {
           />
         </Link>
       </div>
-    </header>
+    </div>
   )
 }

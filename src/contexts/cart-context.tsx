@@ -3,13 +3,13 @@
 import { createContext, useCallback, useContext, useState } from 'react'
 
 type CartItem = {
-  productId: string
+  productId: number
   quantity: number
 }
 
 type CartContextType = {
   items: CartItem[]
-  addToCart: (productId: string) => void
+  addToCart: (productId: number) => void
 }
 
 const CartContext = createContext({} as CartContextType)
@@ -18,7 +18,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([])
 
   const addToCart = useCallback(
-    (productId: string) =>
+    (productId: number) =>
       setItems((state) => {
         const productInCart = state.some((item) => item.productId === productId)
 

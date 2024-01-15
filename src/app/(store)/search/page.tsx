@@ -24,8 +24,6 @@ async function searchProducts(query: string): Promise<Product[]> {
 }
 
 export default async function Search({ searchParams }: SearchProps) {
-  console.log(searchParams)
-
   const { q: query } = searchParams
 
   if (!query) {
